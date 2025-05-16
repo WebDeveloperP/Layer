@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Layer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link media="all" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper wrapper--offset-0">
+        <header class="header header--secondary">
+            <div class="container">
+                <div class="header-upper visible--md">
+                    <ul class="header-contact">
+                        <li><a class="header-contact__link" href="bs1201989@gmai.com"><strong>111 King Street, Los Angeles, CA.</strong></a></li>
+                        <li><a class="header-contact__link" href="bs1201989@gmai.com"><strong>bs1201989@.com</strong></a></li>
+                    </ul>
+                    <ul class="social">
+                        <li>
+                            <a class="social__link" href="#" target="_blank">
+								<svg width="15" height="14" viewBox="0 0 15 14">
+									<path d="M11.8133 0H14.1133L9.08845 5.74336L15 13.5586H10.3712L6.74593 8.81856L2.59772 13.5586H0.296162L5.67082 7.41551L0 0H4.74606L8.0231 4.33242L11.8133 0ZM11.006 12.1818H12.2806L4.0536 1.3045H2.68603L11.006 12.1818Z"/>
+								</svg>
+							</a>
+                        </li>
+                        <li>
+                            <a class="social__link" href="#" target="_blank">
+								<svg width="10" height="16" viewBox="0 0 15 24">
+									<path d="M13.0836 13.5L13.7492 9.15469H9.58203V6.3375C9.58203 5.14687 10.1633 3.98906 12.0289 3.98906H13.9227V0.295313C13.9227 0.295313 12.207 0 10.5664 0C7.13516 0 4.88984 2.08125 4.88984 5.84531V9.15469H1.07422V13.5H4.88984V24H9.58672V13.5H13.0836Z"/>
+								</svg>
+							</a>
+                        </li>
+                        <li>
+                            <a class="social__link" href="#" target="_blank">
+								<svg width="15" height="15" viewBox="0 0 12 12">
+									<path d="M2.68661 12H0.198214V3.98839H2.68661V12ZM1.44107 2.89554C0.645536 2.89554 0 2.23661 0 1.44107C0 1.05888 0.151827 0.692333 0.42208 0.42208C0.692333 0.151827 1.05888 0 1.44107 0C1.82327 0 2.18981 0.151827 2.46006 0.42208C2.73032 0.692333 2.88214 1.05888 2.88214 1.44107C2.88214 2.23661 2.23661 2.89554 1.44107 2.89554ZM11.9973 12H9.51429V8.1C9.51429 7.17054 9.49554 5.97857 8.22054 5.97857C6.92679 5.97857 6.72857 6.98839 6.72857 8.03304V12H4.24286V3.98839H6.62946V5.08125H6.66429C6.99643 4.45179 7.80804 3.7875 9.01875 3.7875C11.5366 3.7875 12 5.44554 12 7.59911V12H11.9973Z"/>
+								</svg>
+							</a>
+                        </li>
+                        <li>
+                            <a class="social__link" href="#" target="_blank">
+								<svg width="15" height="16" viewBox="0 0 15 16">
+									<path d="M7.42745 4.47857C5.29918 4.47857 3.5825 6.19525 3.5825 8.32352C3.5825 10.4518 5.29918 12.1685 7.42745 12.1685C9.55573 12.1685 11.2724 10.4518 11.2724 8.32352C11.2724 6.19525 9.55573 4.47857 7.42745 4.47857ZM7.42745 10.8232C6.05211 10.8232 4.92773 9.70222 4.92773 8.32352C4.92773 6.94483 6.04876 5.8238 7.42745 5.8238C8.80615 5.8238 9.92718 6.94483 9.92718 8.32352C9.92718 9.70222 8.8028 10.8232 7.42745 10.8232ZM12.3265 4.32129C12.3265 4.8199 11.9249 5.21811 11.4297 5.21811C10.9311 5.21811 10.5329 4.81655 10.5329 4.32129C10.5329 3.82603 10.9344 3.42447 11.4297 3.42447C11.9249 3.42447 12.3265 3.82603 12.3265 4.32129ZM14.8731 5.2315C14.8162 4.03016 14.5418 2.96602 13.6617 2.08928C12.785 1.21253 11.7208 0.938135 10.5195 0.8779C9.28133 0.807627 5.57023 0.807627 4.33208 0.8779C3.13409 0.934788 2.06995 1.20919 1.18986 2.08593C0.309775 2.96267 0.0387205 4.02681 -0.0215138 5.22815C-0.0917871 6.4663 -0.0917871 10.1774 -0.0215138 11.4155C0.0353741 12.6169 0.309775 13.681 1.18986 14.5578C2.06995 15.4345 3.13075 15.7089 4.33208 15.7691C5.57023 15.8394 9.28133 15.8394 10.5195 15.7691C11.7208 15.7123 12.785 15.4379 13.6617 14.5578C14.5384 13.681 14.8128 12.6169 14.8731 11.4155C14.9434 10.1774 14.9434 6.46965 14.8731 5.2315ZM13.2735 12.744C13.0125 13.3999 12.5072 13.9052 11.848 14.1696C10.8608 14.5611 8.51836 14.4708 7.42745 14.4708C6.33655 14.4708 3.99076 14.5578 3.00693 14.1696C2.35105 13.9086 1.84575 13.4033 1.58139 12.744C1.18986 11.7569 1.28022 9.41443 1.28022 8.32352C1.28022 7.23261 1.19321 4.88682 1.58139 3.903C1.8424 3.24711 2.3477 2.74182 3.00693 2.47745C3.9941 2.08593 6.33655 2.17628 7.42745 2.17628C8.51836 2.17628 10.8642 2.08928 11.848 2.47745C12.5039 2.73847 13.0092 3.24377 13.2735 3.903C13.665 4.89017 13.5747 7.23261 13.5747 8.32352C13.5747 9.41443 13.665 11.7602 13.2735 12.744Z"/>
+								</svg>
+							</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-under">
+                    <div class="header-inner">
+                        <a href="home.html" class="header-inner__logo">
+							<img class="header-inner__logo--light" src="img/logo3_mobile.png" alt="image description">
+							<img class="header-inner__logo--dark" src="img/logo_mobile .png" alt="image description">
+						</a>
+                        <span class="delimiter visible--lg"></span>
+                        <a class="header-inner__tel visible--lg" href="tel:+880 1303 868907">+880 1303 868907</a>
+                        <a href="#" class="btn btn--outline-white visible--lg">
+							Appointment
+							<svg class="icon" width="21" height="12" viewBox="0 0 21 12">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.75L0 6.75L0 5.25L15 5.25V6.75Z"/>
+								<path d="M21 5.99986L14.25 11.196L14.25 0.803711L21 5.99986Z"/>
+							</svg>
+						</a>
+                    </div>
+                    <div class="nav-drop">
+                        <nav class="nav">
+                            <ul class="menu">
+                                <li class="menu__item has-submenu">
+                                    <a class="menu__link" href="#">Home</a>
+                                    <span class="sub-arrow"></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="home.html">Main home</a></li>
+                                        <li><a href="homepage.html">Classic home</a></li>
+                                        <li><a href="homepage-2.html">Attorney home</a></li>
+                                        <li><a href="homepage-3.html">Modern home</a></li>
+                                        <li><a href="homepage-5.html">Classic Home II</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="menu__link" href="about.html">About us</a></li>
+                                <li><a class="menu__link" href="practices.html">Areas</a></li>
+                                <li><a class="menu__link" href="case-studies.html">Case Studies</a></li>
+                                <li><a class="menu__link" href="lawyers.html">Our Lawyers</a></li>
+                                <li><a class="menu__link" href="news.html">News</a></li>
+                                <li class="menu__item has-submenu">
+                                    <a class="menu__link" href="#">Pages</a>
+                                    <span class="sub-arrow"></span>
+                                    <ul class="sub-menu">
+                                        <li><a href="appointment.html">Appointment</a></li>
+                                        <li><a href="pay-bill.html">Pay Bill</a></li>
+                                        <li><a href="contacts.html">Contacts</a></li>
+                                        <li><a href="inaccurate-credit-reporting-alone-does-not-confer.html">Single Case</a></li>
+                                        <li><a href="corporate-finance.html">Single Practice</a></li>
+                                        <li><a href="typography.html">Typography</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <span class="nav-opener"><span></span></span>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section-tile">
+                <div class="section-tile__item offset--0">
+                    <div class="image-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="image-slide">
+                                    <img src="img/image-3.jpg" alt="image description">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slide">
+                                    <img src="img/image-4.jpg" alt="image description">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="image-slide">
+                                    <img src="img/image-5.jpg" alt="image description">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination swiper-pagination--vertical"></div>
+                    </div>
+                </div>
+                <div class="section-tile__item text--white">
+                    <div class="container">
+                        <h1>Legal Insight. Business Success.</h1>
+                        <p>Smart approaches to legal solutions with exceptional service. Legal talent and expertise necessary to meet our clients’ needs in an ever-changing and fast-paced environment.</p>
+                        <a href="#" class="btn btn--white">
+							Get in touch
+							<svg class="icon" width="21" height="12" viewBox="0 0 21 12">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.75L0 6.75L0 5.25L15 5.25V6.75Z"/>
+								<path d="M21 5.99986L14.25 11.196L14.25 0.803711L21 5.99986Z"/>
+							</svg>
+						</a>
+                    </div>
+                    <div class="bg-stretch">
+                        <img src="img/bglawyer.jpg" alt="image description">
+                    </div>
+                </div>
+            </section>
+            <section class="section-tile">
+                <div class="section-tile__item bg--gradient">
+                    <div class="container">
+                        <div class="cta-form">
+                            <h2>Free Case Evaluation</h2>
+                            <p>Contacting the firm is free. We understand that the disputes facing you, your family or your business can seem daunting.</p>
+                            <form action="#">
+                                <div class="form-row">
+                                    <div class="form-row__field">
+                                        <input type="text" class="form-control" placeholder="Name*">
+                                    </div>
+                                    <div class="form-row__field">
+                                        <input type="email" class="form-control" placeholder="Email*">
+                                    </div>
+                                    <div class="form-row__field">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                    <div class="form-row__field">
+                                        <textarea placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="form-row__field form-row__field--btn">
+                                        <button class="btn btn--outline-secondary">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-tile__item">
+                    <div class="container">
+                        <h4 class="headtitle mb--5">LEGAL AWARDS</h4>
+                        <ul class="post-list">
+                            <li class="post-list__item">
+                                <div class="post-card">
+                                    <div class="listing-meta">
+                                        <span class="listing-meta__item">
+											<a href="#">Corporate Law</a>
+										</span>
+                                        <span class="listing-meta__item">
+											<a href="#">September 20, 2024</a>
+										</span>
+                                    </div>
+                                    <h3 class="post-card__title"><a href="#">US Sues California Over Immigration Laws</a></h3>
+                                    <a href="#" class="btn btn--link">Read More</a>
+                                </div>
+                            </li>
+                            <li class="post-list__item">
+                                <div class="post-card">
+                                    <div class="listing-meta">
+                                        <span class="listing-meta__item">
+											<a href="#">Corporate Law</a>
+										</span>
+                                        <span class="listing-meta__item">
+											<a href="#">September 10, 2025</a>
+										</span>
+                                    </div>
+                                    <h3 class="post-card__title"><a href="#">US Sues California Over Immigration Laws</a></h3>
+                                    <a href="#" class="btn btn--link">Read More</a>
+                                </div>
+                            </li>
+                            <li class="post-list__item">
+                                <div class="post-card">
+                                    <div class="listing-meta">
+                                        <span class="listing-meta__item">
+											<a href="#">Corporate Law</a>
+										</span>
+                                        <span class="listing-meta__item">
+											<a href="#">September 10, 2025</a>
+										</span>
+                                    </div>
+                                    <h3 class="post-card__title"><a href="#">US Sues California Over Immigration Laws</a></h3>
+                                    <a href="#" class="btn btn--link">Read More</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section bg--light">
+                <div class="container">
+                    <div class="section-headline">
+                        <h4>Service offerings</h4>
+                    </div>
+                    <ul class="row-list gap--1">
+                        <li class="row-list__item">
+                            <div class="card card--overlay">
+                                <div class="card__image">
+                                    <img src="img/img-11.png" width="40" alt="image description">
+                                </div>
+                                <h4 class="card__title">Corporate Law</h4>
+                                <div class="text-wrap">
+                                    <p>Every day, we help international businesses determine how best to structure their domestic and overseas operations.</p>
+                                </div>
+                                <a href="#" class="card__link"></a>
+                            </div>
+                        </li>
+                        <li class="row-list__item">
+                            <div class="card card--overlay">
+                                <div class="card__image">
+                                    <img src="img/img-12.png" width="40" alt="image description">
+                                </div>
+                                <h4 class="card__title">Data Privacy</h4>
+                                <div class="text-wrap">
+                                    <p>Our data privacy lawyers are ready to help you navigate these complex requirements to ensure that your business is protected.</p>
+                                </div>
+                                <a href="#" class="card__link"></a>
+                            </div>
+                        </li>
+                        <li class="row-list__item">
+                            <div class="card card--overlay">
+                                <div class="card__image">
+                                    <img src="img/img-13.png" width="39" alt="image description">
+                                </div>
+                                <h4 class="card__title">Dispute Resolution/Litigation</h4>
+                                <div class="text-wrap">
+                                    <p>Our team has earned widespread recognition for its accomplishments with international dispute resolution.</p>
+                                </div>
+                                <a href="#" class="card__link"></a>
+                            </div>
+                        </li>
+                        <li class="row-list__item">
+                            <div class="card card--overlay">
+                                <div class="card__image">
+                                    <img src="img/img-14.png" width="39" alt="image description">
+                                </div>
+                                <h4 class="card__title">Employment Law</h4>
+                                <div class="text-wrap">
+                                    <p>If you have robust labor and employment policies in place, our in-depth HR auditing services ensure your company is legally.</p>
+                                </div>
+                                <a href="#" class="card__link"></a>
+                            </div>
+                        </li>
+                        <li class="row-list__item">
+                            <div class="card card--overlay">
+                                <div class="card__image">
+                                    <img src="img/img-15.png" width="24" alt="image description">
+                                </div>
+                                <h4 class="card__title">Intellectual Property Law</h4>
+                                <div class="text-wrap">
+                                    <p>Protect your trademarks, copyrights, patents, trade secrets, confidential information and other intellectual property rights around the world.</p>
+                                </div>
+                                <a href="#" class="card__link"></a>
+                            </div>
+                        </li>
+                        <li class="row-list__item">
+                            <div class="card card--overlay">
+                                <div class="card__image">
+                                    <img src="img/img-16.png" width="39" alt="image description">
+                                </div>
+                                <h4 class="card__title">International Law</h4>
+                                <div class="text-wrap">
+                                    <p>We protect clients international enterprises and we never stop working to further develop our worldwide legal network.</p>
+                                </div>
+                                <a href="#" class="card__link"></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn-holder">
+                        <a href="#" class="btn btn--outline-primary">
+							Find Out More
+							<svg class="icon" width="21" height="12" viewBox="0 0 21 12">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.75L0 6.75L0 5.25L15 5.25V6.75Z"/>
+								<path d="M21 5.99986L14.25 11.196L14.25 0.803711L21 5.99986Z"/>
+							</svg>
+						</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section-headline">
+                        <h4>Success stories</h4>
+                    </div>
+                    <div class="post-slider slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-38-1200x800.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Corporate & Finance</span>
+                                            <span>Tax</span>
+                                        </div>
+                                        <h2 class="stories-card__title"><a href="#">Inaccurate Credit Reporting Alone Does Not Confer</a></h2>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-37-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Intellectual Property</span>
+                                            <span>Litigation</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">Litigation Issues Arising from Transactions</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-36-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Corporate & Finance</span>
+                                            <span>International</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">‘Law360’ on Evidence Issues with AI-Created Publications</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-35-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Intellectual Property</span>
+                                            <span>Tax</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">IPI Gains Market Share in Hot Data Center Market</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-34-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Regulatory & Specialty</span>
+                                            <span>Tax</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">Calif. Businesses Avoid Privacy Class Action</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-33-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>International</span>
+                                            <span>Litigation</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">Finance & Risk on Outlook for Project Development</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-32-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Corporate & Finance</span>
+                                            <span>Tax</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">Employment Class Action Strategy Avoids Expensive</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/image-39-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Litigation</span>
+                                            <span>Tax</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">Breach of Contract & Foreclosure of Mechanics</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="stories-card">
+                                    <div class="stories-card__img">
+                                        <img src="img/us-court-800x533.jpg" alt="image description">
+                                    </div>
+                                    <div class="stories-card__content">
+                                        <div class="categories">
+                                            <span>Intellectual Property</span>
+                                            <span>International</span>
+                                        </div>
+                                        <h3 class="stories-card__title"><a href="#">One More Case Won. Legal Separation in United States</a></h3>
+                                        <a href="#" class="btn btn--link">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-btn slider-btn__prev"></div>
+                        <div class="slider-btn slider-btn__next"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-tile">
+                <div class="section-tile__item bg--gradient">
+                    <div class="container">
+                        <h4 class="headtitle">Company stats</h4>
+                        <p>Our lawyers offer clients a range of integrated global capabilities, including some of the world’s most active M&A, real estate, financial services, litigation and corporate risk practices.</p>
+                        <ul class="row-list col--6">
+                            <li class="row-list__item">
+                                <div class="highlight-item align--start">
+                                    <span class="highlight-item__num text--secondary" data-value="100"></span>
+                                    <h4 class="highlight-item__title">Lawyers and advisors</h4>
+                                </div>
+                            </li>
+                            <li class="row-list__item">
+                                <div class="highlight-item align--start">
+                                    <span class="highlight-item__num text--secondary" data-value="50"></span>
+                                    <h4 class="highlight-item__title">Countries where we work</h4>
+                                </div>
+                            </li>
+                            <li class="row-list__item">
+                                <div class="highlight-item align--start">
+                                    <span class="highlight-item__num text--secondary" data-value="40"></span>
+                                    <h4 class="highlight-item__title">Offices around the world</h4>
+                                </div>
+                            </li>
+                            <li class="row-list__item">
+                                <div class="highlight-item align--start">
+                                    <span class="highlight-item__num text--secondary" data-value="125000"></span>
+                                    <h4 class="highlight-item__title">Annual pro bono hours</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-tile__item bg--light">
+                    <div class="container">
+                        <h4 class="headtitle mb--5">LEGAL AWARDS</h4>
+                        <p>Our lawyers offer clients a range of integrated global capabilities, including some of the world’s most active M&A, real estate, financial services, litigation and corporate risk practices.</p>
+                        <ul class="row-list col--6">
+                            <li class="row-list__item">
+                                <div class="awards-img">
+                                    <img src="img/img-1.png" width="183" alt="image description">
+                                </div>
+                            </li>
+                            <li class="row-list__item">
+                                <div class="awards-img">
+                                    <img src="img/img-2.png" width="131" alt="image description">
+                                </div>
+                            </li>
+                            <li class="row-list__item">
+                                <div class="awards-img">
+                                    <img src="img/img-3.png" width="182" alt="image description">
+                                </div>
+                            </li>
+                            <li class="row-list__item">
+                                <div class="awards-img">
+                                    <img src="img/img-4.png" width="200" alt="image description">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-testimonial">
+                <div class="container">
+                    <div class="section-headline">
+                        <h4>Satisfied client stories</h4>
+                    </div>
+                    <div class="testimonial-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <blockquote class="testimonial-quote">
+                                    <p>“JURIS is committed to providing its clients with the best legal representation available, while also providing the level attention to detail that our clients expect and deserve.”</p>
+                                    <span class="testimonial-quote__author">Mary Jane, IT Company CEO</span>
+                                </blockquote>
+                            </div>
+                            <div class="swiper-slide">
+                                <blockquote class="testimonial-quote">
+                                    <p>“JURIS is committed to providing its clients with the best legal representation available, while also providing the level attention to detail that our clients expect and deserve.”</p>
+                                    <span class="testimonial-quote__author">Mary Jane, IT Company CEO</span>
+                                </blockquote>
+                            </div>
+                            <div class="swiper-slide">
+                                <blockquote class="testimonial-quote">
+                                    <p>“JURIS is committed to providing its clients with the best legal representation available, while also providing the level attention to detail that our clients expect and deserve.”</p>
+                                    <span class="testimonial-quote__author">Mary Jane, IT Company CEO</span>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="bg-stretch">
+                    <img src="img/image-7.jpg" alt="image description">
+                </div>
+            </section>
+            <section class="section bg--light">
+                <div class="container">
+                    <div class="section-headline">
+                        <h4>Our people</h4>
+                    </div>
+                    <ul class="row-list gap--1">
+                        <li class="row-list__item">
+                            <div class="team-card">
+                                <div class="team-card__img">
+                                    <img src="img/law-6-552x552.jpg" alt="image description">
+                                </div>
+                                <h3 class="team-title">Peter Morgan</h3>
+                                <strong class="team-position">Senior Attorney, NY, NY</strong>
+                                <ul class="contact-info top--line">
+                                    <li class="contact-info__item">
+                                        <span class="contact-info__text">Mail</span>
+                                        <a class="contact-info__link" href="bs1201989@gmail.com">bs1201989@gmail.com</a>
+                                    </li>
+                                    <li class="contact-info__item">
+                                        <span class="contact-info__text">Tel</span>
+                                        <a class="contact-info__link" href="tel:+8801303868907">+8801303868907</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="row-list__item">
+                            <div class="team-card">
+                                <div class="team-card__img">
+                                    <img src="img/image-43-552x552.jpg" alt="image description">
+                                </div>
+                                <h3 class="team-title">Kevin M. Johnson</h3>
+                                <strong class="team-position">Legal Assistant, CH, IL</strong>
+                                <ul class="contact-info top--line">
+                                    <li class="contact-info__item">
+                                        <span class="contact-info__text">Mail</span>
+                                        <a class="contact-info__link" href="bs1201989@gmail.com">bs1201989@gmail.com</a>
+                                    </li>
+                                    <li class="contact-info__item">
+                                        <span class="contact-info__text">Tel</span>
+                                        <a class="contact-info__link" href="tel:+8801303868907">+8801303868907</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="row-list__item">
+                            <div class="team-card">
+                                <div class="team-card__img">
+                                    <img src="img/image-44-552x552.jpg" alt="image description">
+                                </div>
+                                <h3 class="team-title">Mary Jane</h3>
+                                <strong class="team-position">Senior Counsel, LA, CA</strong>
+                                <ul class="contact-info top--line">
+                                    <li class="contact-info__item">
+                                        <span class="contact-info__text">Mail</span>
+                                        <a class="contact-info__link" href="bs1201989@gmail.com">bs1201989@gmail.com</a>
+                                    </li>
+                                    <li class="contact-info__item">
+                                        <span class="contact-info__text">Tel</span>
+                                        <a class="contact-info__link" href="tel:+8801303868907">+8801303868907</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn-holder">
+                        <a href="#" class="btn btn--outline-primary">
+							Find Out More
+							<svg class="icon" width="21" height="12" viewBox="0 0 21 12">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.75L0 6.75L0 5.25L15 5.25V6.75Z"/>
+								<path d="M21 5.99986L14.25 11.196L14.25 0.803711L21 5.99986Z"/>
+							</svg>
+						</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section bg--gradient">
+                <div class="container">
+                    <div class="content-row">
+                        <div class="content-row__inner">
+                            <h2>Our team of lawyers has the experience to guide you through your legal claim.</h2>
+                        </div>
+                        <div class="content-row__btn">
+                            <a href="#" class="btn btn--outline-secondary">
+								Find Out More
+								<svg class="icon" width="21" height="12" viewBox="0 0 21 12">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.75L0 6.75L0 5.25L15 5.25V6.75Z"/>
+									<path d="M21 5.99986L14.25 11.196L14.25 0.803711L21 5.99986Z"/>
+								</svg>
+							</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-upper">
+                    <div class="footer-upper__col col--4">
+                        <a href="#" class="footer-logo">
+							<img src="img/logo2-768x143.png" width="270" alt="image description">
+						</a>
+                    </div>
+                    <div class="footer-upper__col col--2">
+                        <h4 class="footer-upper__title">Quick links</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link">Home</a></li>
+                            <li><a href="#" class="footer-list__link">Services</a></li>
+                            <li><a href="#" class="footer-list__link">About Us</a></li>
+                            <li><a href="#" class="footer-list__link">Cases</a></li>
+                            <li><a href="#" class="footer-list__link">News</a></li>
+                            <li><a href="#" class="footer-list__link">Pages</a></li>
+                            <li><a href="#" class="footer-list__link">Contacts</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-upper__col col--2">
+                        <h4 class="footer-upper__title">News & Events</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link">News</a></li>
+                            <li><a href="#" class="footer-list__link">Events</a></li>
+                            <li><a href="#" class="footer-list__link">Press releases</a></li>
+                            <li><a href="#" class="footer-list__link">Webinars</a></li>
+                            <li><a href="#" class="footer-list__link">White papers</a></li>
+                            <li><a href="#" class="footer-list__link">Newsletters</a></li>
+                            <li><a href="#" class="footer-list__link">Publications</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-upper__col col--2">
+                        <h4 class="footer-upper__title">Practices</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link">Energy & Natural Resources</a></li>
+                            <li><a href="#" class="footer-list__link">Finance & Financial Services</a></li>
+                            <li><a href="#" class="footer-list__link">Health Care & Life Sciences</a></li>
+                            <li><a href="#" class="footer-list__link">Insurance</a></li>
+                            <li><a href="#" class="footer-list__link">Real Estate & REITs</a></li>
+                            <li><a href="#" class="footer-list__link">Technology & Telecom</a></li>
+                            <li><a href="#" class="footer-list__link">Transportation</a></li>
+                            <li><a href="#" class="footer-list__link">Additional Industries</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-upper__col col--2">
+                        <h4 class="footer-upper__title">Services</h4>
+                        <ul class="footer-list">
+                            <li><a href="#" class="footer-list__link">Corporate & Finance</a></li>
+                            <li><a href="#" class="footer-list__link">Intellectual Property</a></li>
+                            <li><a href="#" class="footer-list__link">International</a></li>
+                            <li><a href="#" class="footer-list__link">Litigation</a></li>
+                            <li><a href="#" class="footer-list__link">Regulatory & Specialty</a></li>
+                            <li><a href="#" class="footer-list__link">Tax</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <div class="footer-contact__item">
+                        <ul class="info-list">
+                            <li class="info-list__item">
+                                <span class="info-list__text">Head Office</span>
+                                <a class="info-list__link" href="#">1760 Wilshire Blvd., LA, CA 90025</a>
+                            </li>
+                            <li class="info-list__item">
+                                <span class="info-list__text">Mail</span>
+                                <a class="info-list__link" href="bs1201989@gmail.com">bs1201989@gmail.com</a>
+                            </li>
+                            <li class="info-list__item">
+                                <span class="info-list__text">Tel</span>
+                                <a class="info-list__link" href="tel:+88 01303 868907">+88 01303 868907</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact__item">
+                        <ul class="social">
+                            <li>
+                                <a class="social__link" href="#" target="_blank">
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<path d="M11.8133 0H14.1133L9.08845 5.74336L15 13.5586H10.3712L6.74593 8.81856L2.59772 13.5586H0.296162L5.67082 7.41551L0 0H4.74606L8.0231 4.33242L11.8133 0ZM11.006 12.1818H12.2806L4.0536 1.3045H2.68603L11.006 12.1818Z"/>
+									</svg>
+								</a>
+                            </li>
+                            <li>
+                                <a class="social__link" href="#" target="_blank">
+									<svg width="10" height="16" viewBox="0 0 15 24">
+										<path d="M13.0836 13.5L13.7492 9.15469H9.58203V6.3375C9.58203 5.14687 10.1633 3.98906 12.0289 3.98906H13.9227V0.295313C13.9227 0.295313 12.207 0 10.5664 0C7.13516 0 4.88984 2.08125 4.88984 5.84531V9.15469H1.07422V13.5H4.88984V24H9.58672V13.5H13.0836Z"/>
+									</svg>
+								</a>
+                            </li>
+                            <li>
+                                <a class="social__link" href="#" target="_blank">
+									<svg width="15" height="15" viewBox="0 0 12 12">
+										<path d="M2.68661 12H0.198214V3.98839H2.68661V12ZM1.44107 2.89554C0.645536 2.89554 0 2.23661 0 1.44107C0 1.05888 0.151827 0.692333 0.42208 0.42208C0.692333 0.151827 1.05888 0 1.44107 0C1.82327 0 2.18981 0.151827 2.46006 0.42208C2.73032 0.692333 2.88214 1.05888 2.88214 1.44107C2.88214 2.23661 2.23661 2.89554 1.44107 2.89554ZM11.9973 12H9.51429V8.1C9.51429 7.17054 9.49554 5.97857 8.22054 5.97857C6.92679 5.97857 6.72857 6.98839 6.72857 8.03304V12H4.24286V3.98839H6.62946V5.08125H6.66429C6.99643 4.45179 7.80804 3.7875 9.01875 3.7875C11.5366 3.7875 12 5.44554 12 7.59911V12H11.9973Z"/>
+									</svg>
+								</a>
+                            </li>
+                            <li>
+                                <a class="social__link" href="#" target="_blank">
+									<svg width="15" height="16" viewBox="0 0 15 16">
+										<path d="M7.42745 4.47857C5.29918 4.47857 3.5825 6.19525 3.5825 8.32352C3.5825 10.4518 5.29918 12.1685 7.42745 12.1685C9.55573 12.1685 11.2724 10.4518 11.2724 8.32352C11.2724 6.19525 9.55573 4.47857 7.42745 4.47857ZM7.42745 10.8232C6.05211 10.8232 4.92773 9.70222 4.92773 8.32352C4.92773 6.94483 6.04876 5.8238 7.42745 5.8238C8.80615 5.8238 9.92718 6.94483 9.92718 8.32352C9.92718 9.70222 8.8028 10.8232 7.42745 10.8232ZM12.3265 4.32129C12.3265 4.8199 11.9249 5.21811 11.4297 5.21811C10.9311 5.21811 10.5329 4.81655 10.5329 4.32129C10.5329 3.82603 10.9344 3.42447 11.4297 3.42447C11.9249 3.42447 12.3265 3.82603 12.3265 4.32129ZM14.8731 5.2315C14.8162 4.03016 14.5418 2.96602 13.6617 2.08928C12.785 1.21253 11.7208 0.938135 10.5195 0.8779C9.28133 0.807627 5.57023 0.807627 4.33208 0.8779C3.13409 0.934788 2.06995 1.20919 1.18986 2.08593C0.309775 2.96267 0.0387205 4.02681 -0.0215138 5.22815C-0.0917871 6.4663 -0.0917871 10.1774 -0.0215138 11.4155C0.0353741 12.6169 0.309775 13.681 1.18986 14.5578C2.06995 15.4345 3.13075 15.7089 4.33208 15.7691C5.57023 15.8394 9.28133 15.8394 10.5195 15.7691C11.7208 15.7123 12.785 15.4379 13.6617 14.5578C14.5384 13.681 14.8128 12.6169 14.8731 11.4155C14.9434 10.1774 14.9434 6.46965 14.8731 5.2315ZM13.2735 12.744C13.0125 13.3999 12.5072 13.9052 11.848 14.1696C10.8608 14.5611 8.51836 14.4708 7.42745 14.4708C6.33655 14.4708 3.99076 14.5578 3.00693 14.1696C2.35105 13.9086 1.84575 13.4033 1.58139 12.744C1.18986 11.7569 1.28022 9.41443 1.28022 8.32352C1.28022 7.23261 1.19321 4.88682 1.58139 3.903C1.8424 3.24711 2.3477 2.74182 3.00693 2.47745C3.9941 2.08593 6.33655 2.17628 7.42745 2.17628C8.51836 2.17628 10.8642 2.08928 11.848 2.47745C12.5039 2.73847 13.0092 3.24377 13.2735 3.903C13.665 4.89017 13.5747 7.23261 13.5747 8.32352C13.5747 9.41443 13.665 11.7602 13.2735 12.744Z"/>
+									</svg>
+								</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn--white">
+							Get In Touch
+							<svg class="icon" width="21" height="12" viewBox="0 0 21 12">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15 6.75L0 6.75L0 5.25L15 5.25V6.75Z"/>
+								<path d="M21 5.99986L14.25 11.196L14.25 0.803711L21 5.99986Z"/>
+							</svg>
+						</a>
+                    </div>
+                </div>
+                <div class="footer-under">
+                    <ul class="footer-list footer-list--row">
+                        <li><a href="#" class="footer-list__link">Terms and Conditions</a></li>
+                        <li><a href="#" class="footer-list__link">Privacy Policy</a></li>
+                        <li>&copy; 2025. All rights reserved.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-stretch">
+                <img src="img/image-2.jpg" alt="image description">
+            </div>
+        </footer>
+    </div>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
